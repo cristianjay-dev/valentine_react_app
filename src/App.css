@@ -60,14 +60,15 @@
   animation: slideIn 0.6s ease-out;
   max-width: 500px;
   width: 90%;
+  aspect-ratio: 4/3; /* Maintain consistent frame size */
 }
 
 .image-frame img {
   display: block;
   width: 100%;
-  height: auto;
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  height: 100%;
+  object-fit: cover; /* This makes the GIF fill the frame */
+  image-rendering: auto; /* Better for GIFs than pixelated */
 }
 
 .image-frame:hover {
